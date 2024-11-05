@@ -68,10 +68,11 @@ object SnowplowEvent {
       }
   }
 
-  private def addSchemaVersionToData(contextSdd: SelfDescribingData[Json]): Json = {
-    val version = Json.obj("_schema_version" -> contextSdd.schema.version.asString.asJson)
-    contextSdd.data.deepMerge(version)
-  }
+  private def addSchemaVersionToData(contextSdd: SelfDescribingData[Json]): Json =
+    if (contextSdd.data.isObject) {
+      val version = Json.obj("_schema_version" -> contextSdd.schema.version.asString.asJson)
+      contextSdd.data.deepMerge(version)
+    } else contextSdd.data
 
   implicit final val contextsCirceEncoder: Encoder[Contexts] =
     Encoder.instance { contexts =>
