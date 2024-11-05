@@ -31,4 +31,5 @@ object Dependencies {
   val specs2           = "org.specs2"                 %% "specs2-core"          % V.specs2     % Test
   val specs2Scalacheck = "org.specs2"                 %% "specs2-scalacheck"    % V.specs2     % Test
   val scalacheck       = "org.scalacheck"             %% "scalacheck"           % V.scalaCheck % Test
+  val circeLiteral     = "io.circe"                   %% "circe-literal"        % V.circe      % Test
 }

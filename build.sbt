@@ -46,7 +46,8 @@ lazy val root = project
       // Scala (test only)
       Dependencies.specs2,
       Dependencies.specs2Scalacheck,
-      Dependencies.scalacheck
+      Dependencies.scalacheck,
+      Dependencies.circeLiteral
     )
   )
 
