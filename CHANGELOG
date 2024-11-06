@@ -1,3 +1,7 @@
+Version 3.2.2 (2024-11-06)
+--------------------------
+Fix for `_schema_version` overriding non-object entity data (#137)
+
 Version 3.2.1 (2024-01-10)
 --------------------------
 Use only version for `_schema_version` context field (#134)
